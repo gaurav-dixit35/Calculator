@@ -25,6 +25,13 @@ function App() {
 
       </Routes>
     </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/calculator" element={<Calculator />} />
+      </Routes>
+    </BrowserRouter>
+
     </Suspense>
   );
 }
