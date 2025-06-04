@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GD's Calculator - User Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #111;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    header h1 {
+      margin: 0;
+      color: #00ffe7;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .back-button {
+      padding: 0.5rem 1rem;
+      background-color: #00ffe7;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .back-button:hover {
+      background-color: #00c7b2;
+    }
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    h2 {
+      color: #00ffe7;
+      border-bottom: 2px solid #00ffe7;
+      padding-bottom: 0.4rem;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    code {
+      background: #000;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #00ffe7;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #00ffe7;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    th {
+      background-color: #111;
+      color: #00ffe7;
+    }
+    tr:hover {
+      background-color: rgba(0, 255, 231, 0.1);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GD's Calculator - Guide</h1>
+    <a class="back-button" href="/calculator">Back to Calculator</a>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome to GD's Calculator</h2>
+      <p>
+        <strong>GD's Calculator</strong> is your all-in-one futuristic computing assistant. Designed for simplicity and power, it brings together:
+        basic + scientific calculations, graph plotting, unit conversion, speech recognition, themes, history saving, and export. Whether you’re a student,
+        a data analyst, or a curious mind, you’ll find everything you need to compute faster and smarter.
+      </p>
+    </section>
+
+    <section>
+      <h2>Quick Usage Examples</h2>
+      <table>
+        <thead>
+          <tr><th>Input</th><th>Description</th><th>Expected Result</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>5 + 3</td><td>Addition</td><td>8</td></tr>
+          <tr><td>log(100)</td><td>Base-10 Logarithm</td><td>2</td></tr>
+          <tr><td>sin(90)</td><td>Trigonometry (in Deg)</td><td>1</td></tr>
+          <tr><td>x^2</td><td>Graphing input</td><td>Plotted Graph</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Feature Navigation</h2>
+      <ul>
+        <li><a href="#basic-buttons">Basic Buttons</a></li>
+        <li><a href="#scientific-buttons">Scientific Buttons</a></li>
+        <li><a href="#unit-converter">Unit Converter</a></li>
+        <li><a href="#formulas">Helpful Formulas</a></li>
+        <li><a href="#advanced">Advanced Features</a></li>
+        <li><a href="#usage">How to Use</a></li>
+      </ul>
+    </section>
+
+    <section id="basic-buttons">
+      <h2>Basic Buttons</h2>
+      <ul>
+        <li><strong>0–9</strong>: Digits</li>
+        <li><strong>+</strong>, <strong>-</strong>, <strong>*</strong>, <strong>/</strong>: Arithmetic Operators</li>
+        <li><strong>%</strong>: Modulus</li>
+        <li><strong>.</strong>: Decimal</li>
+        <li><strong>=</strong>: Evaluate</li>
+        <li><strong>C</strong>: Clear</li>
+        <li><strong>⌫</strong>: Delete last digit</li>
+        <li><strong>Ans</strong>: Last result recall</li>
+      </ul>
+    </section>
+
+    <section id="scientific-buttons">
+      <h2>Scientific Buttons</h2>
+      <ul>
+        <li><strong>( )</strong>: Parentheses</li>
+        <li><strong>^</strong>: Power</li>
+        <li><strong>√</strong>: Square Root</li>
+        <li><strong>!</strong>: Factorial</li>
+        <li><strong>x²</strong>: Square</li>
+        <li><strong>log</strong>: log base 10</li>
+        <li><strong>ln</strong>: natural log</li>
+        <li><strong>10^x</strong>: Power of 10</li>
+        <li><strong>e</strong>: Euler constant</li>
+        <li><strong>sin, cos, tan</strong>: Trigonometric</li>
+        <li><strong>π</strong>: Pi constant</li>
+        <li><strong>Deg/Rad</strong>: Toggle Angle Unit</li>
+      </ul>
+    </section>
+
+    <section id="unit-converter">
+      <h2>Unit Converter Categories</h2>
+      <ul>
+        <li><strong>Length</strong>: m, km, mi, ft, in</li>
+        <li><strong>Weight</strong>: g, kg, lb, oz</li>
+        <li><strong>Temperature</strong>: °C, °F, K</li>
+        <li><strong>Time</strong>: sec, min, hr, day</li>
+        <li><strong>Speed</strong>: m/s, km/h, mph</li>
+        <li><strong>Volume</strong>: ml, l, gallon</li>
+        <li><strong>Area</strong>: m², km², ft²</li>
+      </ul>
+    </section>
+
+    <section id="formulas">
+      <h2>Helpful Formulas</h2>
+      <ul>
+        <li>Area (circle): <code>π × r²</code></li>
+        <li>Quadratic: <code>x = [-b ± √(b²-4ac)] / 2a</code></li>
+        <li>Speed: <code>distance ÷ time</code></li>
+        <li>Exponent: <code>base ^ power</code></li>
+        <li>Trig Identity: <code>sin²x + cos²x = 1</code></li>
+      </ul>
+    </section>
+
+    <section id="advanced">
+      <h2>Advanced Features</h2>
+      <ul>
+        <li><strong>Graph Plotting</strong>: Enter function like <code>x^2</code>, click 📈</li>
+        <li><strong>Voice Input</strong>: Click 🎤 to speak</li>
+        <li><strong>Export CSV</strong>: Save calculations</li>
+        <li><strong>Email History</strong>: Send to yourself</li>
+        <li><strong>History</strong>: Scroll through old results</li>
+        <li><strong>Theme</strong>: Toggle dark/light mode</li>
+      </ul>
+    </section>
+
+    <section id="usage">
+      <h2>How to Use</h2>
+      <ol>
+        <li>Click/tap the buttons or type expressions</li>
+        <li>Use <code>=</code> to calculate</li>
+        <li>Graph with <code>x</code>-based functions</li>
+        <li>Use converter or speech as needed</li>
+        <li>Switch to dark/light mode anytime</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Need Help?</h2>
+      <p>Need help or want to report a bug? Email us at
+        <strong>gd36990@gmail.com</strong>
+        </p>
+    </section>
+  </main>
+</body>
+</html>

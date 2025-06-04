@@ -82,14 +82,14 @@ const UnitConverter = () => {
     if (category === "temperature") {
       setResult(convertTemperature(val, from, to));
     } else if (category === "currency") {
-      try {
-        const res = await fetch(`https://api.exchangerate-api.com/v4/latest/${from}`);
-        const data = await res.json();
-        setResult(val * data.rates[to]);
-      } catch (e) {
-        setError("Currency conversion failed.");
-      }
-    } else {
+        try {
+          const res = await fetch(`https://api.frankfurter.app/latest?amount=${val}&from=${from}&to=${to}`);
+          const data = await res.json();
+          setResult(data.rates[to]);
+        } catch (e) {
+          setError("Currency conversion failed.");
+        }
+      }else {
       const factor = units[category][to] / units[category][from];
       setResult(val * factor);
     }
